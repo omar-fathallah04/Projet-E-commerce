@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catégories</title>
+</head>
+
+<body>
+
+    <h1>Catégories</h1>
+    <ul>
+        {% for category in categories %}
+        <li><a href="{% url 'category_detail' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'product_list' %}">Voir les produits</a>
+
+</body>
+
+</html>
